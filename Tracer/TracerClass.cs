@@ -1,38 +1,38 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using System.Diagnostics;
 
 namespace Tracer
 {
-    public class TracerClass
+    public class TracerClass:ITrace
     {
         TraceData traced;
+        Stopwatch stopwatch = new Stopwatch();
         public void startTrace(string methodName, string className, DateTime startTime)
         {
             traced.className = className;
             traced.methodName = methodName;
-            traced.startTime = startTime;
+            stopwatch.Start();
         }
         public void endTrace(DateTime endTime)
         {
-            traced.workingMilliseconds = endTime.Millisecond - traced.startTime.Millisecond;
-            traced.workingSeconds = endTime.Second - traced.startTime.Second;
-            //traced.resultTime = endTime;
+            stopwatch.Stop();
+            traced.resultTime = stopwatch.Elapsed;
         }
-        
+        public TraceData getResult()
+        {
+            return traced;
+        }
         public void printAll()
         {
-            Console.WriteLine(traced.className+" "+ traced.methodName + " " + traced.workingSeconds+"s "+traced.workingMilliseconds+"ms"); 
+            Console.WriteLine(traced.className+" "+ traced.methodName + " " +(int)traced.resultTime.TotalMilliseconds+"ms"); 
         }
     }
-    struct TraceData
+    public struct TraceData
     {
         public string methodName { get; set; }
         public string className { get; set; }
-        public DateTime startTime { get; set; }
-        //public DateTime endTime { get; set; }
-        //public DateTime resultTime { get; set; }
-        public int workingMilliseconds { get; set; }
-        public int workingSeconds { get; set; }
+        public TimeSpan resultTime { get; set; }
     }
 }

@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Threading;
+using System.Diagnostics;
+using System.Reflection;
 
 namespace Tracer
 {
@@ -8,8 +10,8 @@ namespace Tracer
         static void Main(string[] args)
         {
             TracerClass tracer=new TracerClass();
-            tracer.startTrace("Main", "Programm", DateTime.Now);
-            Thread.Sleep(1500);
+            tracer.startTrace(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name , DateTime.Now);
+            Thread.Sleep(1280);
             tracer.endTrace(DateTime.Now);
             tracer.printAll();
         }
