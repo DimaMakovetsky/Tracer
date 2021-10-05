@@ -1,0 +1,13 @@
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.exe
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.deps.json
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.runtimeconfig.json
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.runtimeconfig.dev.json
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.dll
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.pdb
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csprojAssemblyReference.cache
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.AssemblyInfoInputs.cache
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.AssemblyInfo.cs
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csproj.CoreCompileInputs.cache
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.dll
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.pdb
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.genruntimeconfig.cache
