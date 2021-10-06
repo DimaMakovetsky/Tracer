@@ -4,6 +4,16 @@
     "D:\\Cal\\2021\\СПП\\Tracer\\Tracer\\Tracer.csproj": {}
   },
   "projects": {
+    "D:\\Cal\\2021\\СПП\\Tracer\\TracerLibrary1\\TracerLibrary1.csproj": {
+      "restore": {
+        "projectUniqueName": "D:\\Cal\\2021\\СПП\\Tracer\\TracerLibrary1\\TracerLibrary1.csproj",
+        "projectName": "TracerLibrary1",
+        "projectPath": "D:\\Cal\\2021\\СПП\\Tracer\\TracerLibrary1\\TracerLibrary1.csproj"
+      },
+      "frameworks": {
+        "net472": {}
+      }
+    },
     "D:\\Cal\\2021\\СПП\\Tracer\\Tracer\\Tracer.csproj": {
       "version": "1.0.0",
       "restore": {
@@ -26,7 +36,11 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
-            "projectReferences": {}
+            "projectReferences": {
+              "D:\\Cal\\2021\\СПП\\Tracer\\TracerLibrary1\\TracerLibrary1.csproj": {
+                "projectPath": "D:\\Cal\\2021\\СПП\\Tracer\\TracerLibrary1\\TracerLibrary1.csproj"
+              }
+            }
           }
         },
         "warningProperties": {
