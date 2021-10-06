@@ -8,17 +8,20 @@ namespace Tracer
     public class TracerClass:ITrace
     {
         TraceData traced;
-        Stopwatch stopwatch = new Stopwatch();
-        public void startTrace(string methodName, string className, DateTime startTime)
+        public TracerClass(string methodName, string className)
         {
             traced.className = className;
             traced.methodName = methodName;
-            stopwatch.Start();
+            traced.duration = new Stopwatch();
         }
-        public void endTrace(DateTime endTime)
+        public void startTrace()
         {
-            stopwatch.Stop();
-            traced.resultTime = stopwatch.Elapsed;
+            traced.duration.Start();
+        }
+        public void endTrace()
+        {
+            traced.duration.Stop();
+            printAll();
         }
         public TraceData getResult()
         {
@@ -26,13 +29,13 @@ namespace Tracer
         }
         public void printAll()
         {
-            Console.WriteLine(traced.className+" "+ traced.methodName + " " +(int)traced.resultTime.TotalMilliseconds+"ms"); 
+            Console.WriteLine(traced.className+" "+ traced.methodName + " " +(int)traced.duration.Elapsed.TotalMilliseconds+"ms"); 
         }
     }
     public struct TraceData
     {
         public string methodName { get; set; }
         public string className { get; set; }
-        public TimeSpan resultTime { get; set; }
+        public Stopwatch duration { get; set; }
     }
 }

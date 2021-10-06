@@ -7,13 +7,29 @@ namespace Tracer
 {
     class Program
     {
+        
         static void Main(string[] args)
+        {  
+            doSomething();
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            tracer.startTrace();
+            Thread.Sleep(120);
+            tracer.endTrace();
+        }
+        static public void doSomething()
         {
-            TracerClass tracer=new TracerClass();
-            tracer.startTrace(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name , DateTime.Now);
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            tracer.startTrace();
+            doSomething2();
             Thread.Sleep(1280);
-            tracer.endTrace(DateTime.Now);
-            tracer.printAll();
+            tracer.endTrace();
+        }
+        static public void doSomething2()
+        {
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            tracer.startTrace();
+            Thread.Sleep(1500);
+            tracer.endTrace();
         }
     }
 }

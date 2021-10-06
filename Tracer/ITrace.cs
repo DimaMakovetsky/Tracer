@@ -6,8 +6,8 @@ namespace Tracer
 {
     interface ITrace
     {
-        void startTrace(string methodName, string className, DateTime startTime);
-        void endTrace(DateTime endTime);
+        void startTrace();
+        void endTrace();
         TraceData getResult();
 
     }
