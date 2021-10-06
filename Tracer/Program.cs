@@ -9,26 +9,32 @@ namespace Tracer
     {
         
         static void Main(string[] args)
-        {  
-            doSomething();
+        {
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            NotMainClass notMain = new NotMainClass();
             tracer.startTrace();
+            
+            ThreadStart th = new ThreadStart(notMain.DoSomethingButNotInMain);
+            Thread thread = new Thread(th);
+            thread.Start();
+            DoSomething();
             Thread.Sleep(120);
+            //WaitHandle.WaitAll(thread);
             tracer.endTrace();
         }
-        static public void doSomething()
+        static public void DoSomething()
         {
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            doSomething2();
+            DoSomething2();
             Thread.Sleep(1280);
             tracer.endTrace();
         }
-        static public void doSomething2()
+        static public void DoSomething2()
         {
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            Thread.Sleep(1500);
+            Thread.Sleep(500);
             tracer.endTrace();
         }
     }
