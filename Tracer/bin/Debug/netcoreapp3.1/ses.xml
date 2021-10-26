@@ -1,0 +1,59 @@
+<?xml version="1.0"?>
+<MainList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <threads>
+    <ThreadsClass>
+      <methodList>
+        <TracerClass>
+          <trace>
+            <methodName>Main</methodName>
+            <className>Program</className>
+            <fullDuration>3307</fullDuration>
+          </trace>
+          <miniMethodList>
+            <TracerClass>
+              <trace>
+                <methodName>DoSomething</methodName>
+                <className>Program</className>
+                <fullDuration>1781</fullDuration>
+              </trace>
+              <miniMethodList>
+                <TracerClass>
+                  <trace>
+                    <methodName>DoSomething2</methodName>
+                    <className>Program</className>
+                    <fullDuration>500</fullDuration>
+                  </trace>
+                  <miniMethodList />
+                </TracerClass>
+              </miniMethodList>
+            </TracerClass>
+            <TracerClass>
+              <trace>
+                <methodName>DoSomething2</methodName>
+                <className>Program</className>
+                <fullDuration>501</fullDuration>
+              </trace>
+              <miniMethodList />
+            </TracerClass>
+          </miniMethodList>
+        </TracerClass>
+      </methodList>
+      <ID>1</ID>
+      <Time>3317</Time>
+    </ThreadsClass>
+    <ThreadsClass>
+      <methodList>
+        <TracerClass>
+          <trace>
+            <methodName>DoSomethingButNotInMain</methodName>
+            <className>NotMainClass</className>
+            <fullDuration>1001</fullDuration>
+          </trace>
+          <miniMethodList />
+        </TracerClass>
+      </methodList>
+      <ID>5</ID>
+      <Time>1002</Time>
+    </ThreadsClass>
+  </threads>
+</MainList>

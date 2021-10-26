@@ -1,0 +1,58 @@
+{
+  "list": [
+    {
+      "methodList": [
+        {
+          "trace": {
+            "methodName": "Main",
+            "className": "Program",
+            "Time": 3307
+          },
+          "miniMethodList": [
+            {
+              "trace": {
+                "methodName": "DoSomething",
+                "className": "Program",
+                "Time": 1781
+              },
+              "miniMethodList": [
+                {
+                  "trace": {
+                    "methodName": "DoSomething2",
+                    "className": "Program",
+                    "Time": 500
+                  },
+                  "miniMethodList": []
+                }
+              ]
+            },
+            {
+              "trace": {
+                "methodName": "DoSomething2",
+                "className": "Program",
+                "Time": 501
+              },
+              "miniMethodList": []
+            }
+          ]
+        }
+      ],
+      "ID": 1,
+      "Time": 3317
+    },
+    {
+      "methodList": [
+        {
+          "trace": {
+            "methodName": "DoSomethingButNotInMain",
+            "className": "NotMainClass",
+            "Time": 1001
+          },
+          "miniMethodList": []
+        }
+      ],
+      "ID": 5,
+      "Time": 1002
+    }
+  ]
+}

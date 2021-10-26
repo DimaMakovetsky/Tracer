@@ -1,41 +1,62 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 using System.Diagnostics;
+using System.Xml.Serialization;
+using Newtonsoft.Json;
+
 
 namespace Tracer
 {
+    [Serializable]
+    //[JsonArray(false)]
     public class TracerClass:ITrace
     {
-        TraceData traced;
+        
+        public TraceData trace;
+        /*public string methodName { get; set; }
+        public string className { get; set; }*/
+        [XmlIgnore]
+        [JsonIgnore]
+        public Stopwatch duration { get; set; }
+        [XmlArray]
+        [JsonProperty]
+        public List<TracerClass> miniMethodList;
+        
         public TracerClass(string methodName, string className)
         {
-            traced.className = className;
-            traced.methodName = methodName;
-            traced.duration = new Stopwatch();
+            trace.className = className;
+            trace.methodName = methodName;
+            duration = new Stopwatch();
+            miniMethodList = new List<TracerClass>();
+            
+        }
+        public TracerClass()
+        {
         }
         public void startTrace()
         {
-            traced.duration.Start();
+            duration.Start();
         }
         public void endTrace()
         {
-            traced.duration.Stop();
-            printAll();
+            duration.Stop();
+            trace.fullDuration = duration.ElapsedMilliseconds;
         }
         public TraceData getResult()
         {
-            return traced;
-        }
-        public void printAll()
-        {
-            Console.WriteLine(traced.className+" "+ traced.methodName + " " +(int)traced.duration.Elapsed.TotalMilliseconds+"ms"); 
+            return trace;
         }
     }
+    [Serializable]
+    
     public struct TraceData
     {
+        [JsonProperty]
         public string methodName { get; set; }
+        [JsonProperty]
         public string className { get; set; }
-        public Stopwatch duration { get; set; }
+        [JsonProperty("Time")]
+        public long fullDuration { get; set; }
     }
+    
 }

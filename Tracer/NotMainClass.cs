@@ -8,13 +8,21 @@ namespace Tracer
 {
     public class NotMainClass
     {
-        public void DoSomethingButNotInMain()
+        static ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
+        public static void DoSomethingButNotInMain()
         {
-            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
-            tracer.startTrace();
-            Thread.Sleep(2500);
-            tracer.endTrace();
+            Program.mainList.list.Add(threadList);
             
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            //threadList.list.methodList.Add(tracer);
+            threadList.methodList.Add(tracer);
+
+            tracer.startTrace();
+            Thread.Sleep(1000);
+            
+            Program.traceEnder(tracer);
+            threadList.EndContdown();
+            //list.Add(tracer.getResult());
         }
     }
 }

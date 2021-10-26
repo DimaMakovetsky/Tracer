@@ -1,6 +1,9 @@
 D:\Cal\2021\СПП\Tracer\TracerLibrary1\bin\Debug\TracerLibrary1.dll
 D:\Cal\2021\СПП\Tracer\TracerLibrary1\bin\Debug\TracerLibrary1.pdb
-D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.csprojAssemblyReference.cache
 D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.csproj.CoreCompileInputs.cache
 D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.dll
 D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.pdb
+D:\Cal\2021\СПП\Tracer\TracerLibrary1\bin\Debug\Newtonsoft.Json.dll
+D:\Cal\2021\СПП\Tracer\TracerLibrary1\bin\Debug\Newtonsoft.Json.xml
+D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.csproj.CopyComplete
+D:\Cal\2021\СПП\Tracer\TracerLibrary1\obj\Debug\TracerLibrary1.csprojAssemblyReference.cache

@@ -7,10 +7,11 @@ D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Tracer.pdb
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csprojAssemblyReference.cache
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.AssemblyInfoInputs.cache
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.AssemblyInfo.cs
-D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csproj.CoreCompileInputs.cache
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.dll
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.pdb
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.genruntimeconfig.cache
 D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\TracerLibrary1.dll
 D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\TracerLibrary1.pdb
 D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csproj.CopyComplete
+D:\Cal\2021\СПП\Tracer\Tracer\bin\Debug\netcoreapp3.1\Newtonsoft.Json.dll
+D:\Cal\2021\СПП\Tracer\Tracer\obj\Debug\netcoreapp3.1\Tracer.csproj.CoreCompileInputs.cache

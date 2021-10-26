@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "ruDwXBjPOjPGm7nd8Wy0CLDvuOOm7sq9ke/XOO80KK55PR9Cu5PLc6zdP7MfLepm96zc8XmTVW+dftWI4Gqxtw==",
+  "dgSpecHash": "OkwFjVBB9q9DaxX7Mxe4vZCfhSCY+NEDVMSE7HdGZatn4bKXVSoxB8iP1UutOvSJ+uMi5ggwO/5R2ciANwJIiQ==",
   "success": true,
   "projectFilePath": "D:\\Cal\\2021\\СПП\\Tracer\\Tracer\\Tracer.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Дима\\.nuget\\packages\\newtonsoft.json\\13.0.1\\newtonsoft.json.13.0.1.nupkg.sha512"
+  ],
   "logs": []
 }
