@@ -10,144 +10,126 @@ namespace LeTesto
 {
     public class Testo
     {
-
-        public static MainList mainList = new MainList();
-        static ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
         [Fact]
         public void Test1()
         {
+            MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
             Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
             mainList.list.Add(threadList);
-
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            /**/
-
             tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
-            
-            // s.Stop();
-            Tracer.Program.traceEnder(tracer);
+            tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
-
+            stopwatch.Stop();
             Xmlirise xml = new Xmlirise();
             xml.Serialize(mainList);
             Jsonise json = new Jsonise();
             json.Serialize(mainList);
-            stopwatch.Stop();
-            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - 500) < 100);
-
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
+        
         [Fact]
         public void Test2()
         {
+            MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
             Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
             mainList.list.Add(threadList);
-
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            /**/
-
             tracer.miniMethodList.Add(Tracer.Program.DoSomething());
-
-            // s.Stop();
-            Tracer.Program.traceEnder(tracer);
+            tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
-
+            stopwatch.Stop();
             Xmlirise xml = new Xmlirise();
             xml.Serialize(mainList);
             Jsonise json = new Jsonise();
             json.Serialize(mainList);
-            stopwatch.Stop();
-            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - 1800) < 100);
-
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
         [Fact]
         public void Test3()
         {
+            MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
             Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
             mainList.list.Add(threadList);
-
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            /**/
-
-            tracer.miniMethodList.Add(Tracer.Program.DoSomething());
             tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
-            // s.Stop();
-            Tracer.Program.traceEnder(tracer);
+            tracer.miniMethodList.Add(Tracer.Program.DoSomething());
+            Thread.Sleep(120);
+            tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
-
+            stopwatch.Stop();
             Xmlirise xml = new Xmlirise();
             xml.Serialize(mainList);
             Jsonise json = new Jsonise();
             json.Serialize(mainList);
-            stopwatch.Stop();
-            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - 2300) < 100);
-
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - mainList.list[0].duration) < 100);
         }
+        
         [Fact]
         public void Test4()
         {
+         MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
             Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
             mainList.list.Add(threadList);
-
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            /**/
-            ThreadStart th = new ThreadStart(NotMainClass.DoSomethingButNotInMain);
-            Thread thread = new Thread(th);
+            ThreadsClass threads = null;
+            Thread thread = new Thread(() =>
+            {
+                threads = NotMainClass.DoSomethingButNotInMain();
+            });
             thread.Start();
-            tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
-            
-
+            Thread.Sleep(120);
             thread.Join();
-            // s.Stop();
-            Tracer.Program.traceEnder(tracer);
+            mainList.list.Add(threads);
+            tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
-
+            stopwatch.Stop();
             Xmlirise xml = new Xmlirise();
             xml.Serialize(mainList);
             Jsonise json = new Jsonise();
             json.Serialize(mainList);
-            stopwatch.Stop();
-            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - 1100) < 100);
-
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
         [Fact]
         public void Test5()
         {
+            MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
             Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
             mainList.list.Add(threadList);
-
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
-            /**/
+            ThreadsClass threads = null;
             tracer.miniMethodList.Add(Tracer.Program.DoSomething());
-
-            tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
-            ThreadStart th = new ThreadStart(NotMainClass.DoSomethingButNotInMain);
-            Thread thread = new Thread(th);
+            Thread thread = new Thread(() =>
+            {
+                threads = NotMainClass.DoSomethingButNotInMain();
+            });
             thread.Start();
             Thread.Sleep(120);
-
             thread.Join();
-            // s.Stop();
-            Tracer.Program.traceEnder(tracer);
+            mainList.list.Add(threads);
+            tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
-
+            stopwatch.Stop();
             Xmlirise xml = new Xmlirise();
             xml.Serialize(mainList);
             Jsonise json = new Jsonise();
             json.Serialize(mainList);
-            stopwatch.Stop();
-            Assert.True(Math.Abs( stopwatch.ElapsedMilliseconds- 3300)<100);
-            
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - mainList.list[0].duration) < 100);
         }
-        
     }
 }

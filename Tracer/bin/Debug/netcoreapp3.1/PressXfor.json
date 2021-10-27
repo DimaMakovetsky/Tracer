@@ -6,9 +6,17 @@
           "trace": {
             "methodName": "Main",
             "className": "Program",
-            "Time": 3307
+            "Time": 3308
           },
           "miniMethodList": [
+            {
+              "trace": {
+                "methodName": "DoSomething2",
+                "className": "Program",
+                "Time": 501
+              },
+              "miniMethodList": []
+            },
             {
               "trace": {
                 "methodName": "DoSomething",
@@ -25,20 +33,12 @@
                   "miniMethodList": []
                 }
               ]
-            },
-            {
-              "trace": {
-                "methodName": "DoSomething2",
-                "className": "Program",
-                "Time": 501
-              },
-              "miniMethodList": []
             }
           ]
         }
       ],
       "ID": 1,
-      "Time": 3317
+      "Time": 3319
     },
     {
       "methodList": [
@@ -46,13 +46,13 @@
           "trace": {
             "methodName": "DoSomethingButNotInMain",
             "className": "NotMainClass",
-            "Time": 1001
+            "Time": 1000
           },
           "miniMethodList": []
         }
       ],
       "ID": 5,
-      "Time": 1002
+      "Time": 1001
     }
   ]
 }

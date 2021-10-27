@@ -13,8 +13,6 @@ namespace Tracer
     {
         
         public TraceData trace;
-        /*public string methodName { get; set; }
-        public string className { get; set; }*/
         [XmlIgnore]
         [JsonIgnore]
         public Stopwatch duration { get; set; }
@@ -28,7 +26,6 @@ namespace Tracer
             trace.methodName = methodName;
             duration = new Stopwatch();
             miniMethodList = new List<TracerClass>();
-            
         }
         public TracerClass()
         {

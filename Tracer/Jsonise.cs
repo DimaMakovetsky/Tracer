@@ -14,6 +14,7 @@ namespace Tracer
             string serialized = JsonConvert.SerializeObject(list,Formatting.Indented);
             //string serialized = JsonSerializer.Serialize(list);
             File.WriteAllText("PressXfor.json", serialized);
+            Console.WriteLine("\n\n" + serialized);
             /*FileStream fs = new FileStream("PressXfor.json", FileMode.OpenOrCreate);
             fs.w(serialized);*/
             //Console.WriteLine(serialized);    

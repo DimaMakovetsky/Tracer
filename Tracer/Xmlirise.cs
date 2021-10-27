@@ -17,6 +17,7 @@ namespace Tracer
             FileStream fs = new FileStream("ses.xml", FileMode.Create);
             serializer.Serialize(fs, list);// traceData.getResult());
             fs.Close();
+            serializer.Serialize(Console.Out, list);
         }
         
     }

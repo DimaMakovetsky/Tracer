@@ -21,15 +21,12 @@ namespace Tracer
         [XmlElement(ElementName = "Time")]
         [JsonProperty("Time")]
         public long duration { get; set; }
-
-        //public JsonList list { get; set; }
         public List<TracerClass> methodList;
         public ThreadsClass(int id)
         {
             this.id = id;
             stopwatch = new Stopwatch();
             methodList = new List<TracerClass>();
-            //list= new JsonList();
             stopwatch.Start();
         }
         public ThreadsClass()

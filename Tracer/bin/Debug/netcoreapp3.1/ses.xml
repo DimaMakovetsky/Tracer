@@ -7,9 +7,17 @@
           <trace>
             <methodName>Main</methodName>
             <className>Program</className>
-            <fullDuration>3307</fullDuration>
+            <fullDuration>3308</fullDuration>
           </trace>
           <miniMethodList>
+            <TracerClass>
+              <trace>
+                <methodName>DoSomething2</methodName>
+                <className>Program</className>
+                <fullDuration>501</fullDuration>
+              </trace>
+              <miniMethodList />
+            </TracerClass>
             <TracerClass>
               <trace>
                 <methodName>DoSomething</methodName>
@@ -27,19 +35,11 @@
                 </TracerClass>
               </miniMethodList>
             </TracerClass>
-            <TracerClass>
-              <trace>
-                <methodName>DoSomething2</methodName>
-                <className>Program</className>
-                <fullDuration>501</fullDuration>
-              </trace>
-              <miniMethodList />
-            </TracerClass>
           </miniMethodList>
         </TracerClass>
       </methodList>
       <ID>1</ID>
-      <Time>3317</Time>
+      <Time>3319</Time>
     </ThreadsClass>
     <ThreadsClass>
       <methodList>
@@ -47,13 +47,13 @@
           <trace>
             <methodName>DoSomethingButNotInMain</methodName>
             <className>NotMainClass</className>
-            <fullDuration>1001</fullDuration>
+            <fullDuration>1000</fullDuration>
           </trace>
           <miniMethodList />
         </TracerClass>
       </methodList>
       <ID>5</ID>
-      <Time>1002</Time>
+      <Time>1001</Time>
     </ThreadsClass>
   </threads>
 </MainList>
