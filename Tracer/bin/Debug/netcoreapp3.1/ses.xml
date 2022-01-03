@@ -22,14 +22,14 @@
               <trace>
                 <methodName>DoSomething</methodName>
                 <className>Program</className>
-                <fullDuration>1781</fullDuration>
+                <fullDuration>1782</fullDuration>
               </trace>
               <miniMethodList>
                 <TracerClass>
                   <trace>
                     <methodName>DoSomething2</methodName>
                     <className>Program</className>
-                    <fullDuration>500</fullDuration>
+                    <fullDuration>501</fullDuration>
                   </trace>
                   <miniMethodList />
                 </TracerClass>
@@ -39,7 +39,7 @@
         </TracerClass>
       </methodList>
       <ID>1</ID>
-      <Time>3319</Time>
+      <Time>3313</Time>
     </ThreadsClass>
     <ThreadsClass>
       <methodList>
@@ -52,7 +52,7 @@
           <miniMethodList />
         </TracerClass>
       </methodList>
-      <ID>5</ID>
+      <ID>6</ID>
       <Time>1001</Time>
     </ThreadsClass>
   </threads>

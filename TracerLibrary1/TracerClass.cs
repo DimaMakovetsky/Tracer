@@ -5,7 +5,7 @@ using System.Xml.Serialization;
 using Newtonsoft.Json;
 
 
-namespace Tracer
+namespace TracerLibrary1
 {
     [Serializable]
     //[JsonArray(false)]
@@ -19,6 +19,7 @@ namespace Tracer
         [XmlArray]
         [JsonProperty]
         public List<TracerClass> miniMethodList;
+        public List<ThreadsClass> threadsList;
         
         public TracerClass(string methodName, string className)
         {

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Xml.Serialization;
 using System.Text.Json.Serialization;
+using TracerLibrary1;
 
 namespace Tracer
 {

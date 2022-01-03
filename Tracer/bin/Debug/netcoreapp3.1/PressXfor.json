@@ -15,30 +15,34 @@
                 "className": "Program",
                 "Time": 501
               },
-              "miniMethodList": []
+              "miniMethodList": [],
+              "threadsList": null
             },
             {
               "trace": {
                 "methodName": "DoSomething",
                 "className": "Program",
-                "Time": 1781
+                "Time": 1782
               },
               "miniMethodList": [
                 {
                   "trace": {
                     "methodName": "DoSomething2",
                     "className": "Program",
-                    "Time": 500
+                    "Time": 501
                   },
-                  "miniMethodList": []
+                  "miniMethodList": [],
+                  "threadsList": null
                 }
-              ]
+              ],
+              "threadsList": null
             }
-          ]
+          ],
+          "threadsList": null
         }
       ],
       "ID": 1,
-      "Time": 3319
+      "Time": 3313
     },
     {
       "methodList": [
@@ -48,10 +52,11 @@
             "className": "NotMainClass",
             "Time": 1000
           },
-          "miniMethodList": []
+          "miniMethodList": [],
+          "threadsList": null
         }
       ],
-      "ID": 5,
+      "ID": 6,
       "Time": 1001
     }
   ]

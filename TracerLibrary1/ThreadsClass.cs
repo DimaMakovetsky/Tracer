@@ -3,10 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using System.Diagnostics;
 using System.Xml.Serialization;
-using System.Text.Json;
 using Newtonsoft.Json;
 
-namespace Tracer
+namespace TracerLibrary1
 {
     [Serializable]
     

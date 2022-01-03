@@ -2,6 +2,7 @@
 using System.Threading;
 using System.Diagnostics;
 using System.Reflection;
+using TracerLibrary1;
 
 namespace Tracer
 {

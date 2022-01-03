@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 using System.Threading;
 using System.Reflection;
-
+using TracerLibrary1;
 namespace Tracer
 {
     public class NotMainClass

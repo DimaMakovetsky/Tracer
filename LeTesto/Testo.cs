@@ -30,7 +30,23 @@ namespace LeTesto
             json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
-        
+        [Fact]
+        public void Test12()
+        {
+            MainList mainList = new MainList();
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
+            Stopwatch stopwatch = new Stopwatch(); stopwatch.Start();
+            mainList.list.Add(threadList);
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            tracer.startTrace();
+            tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
+            tracer.endTrace();
+            threadList.methodList.Add(tracer);
+            threadList.EndContdown();
+            stopwatch.Stop();
+            Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - mainList.list[0].duration) < 100);
+        }
+
         [Fact]
         public void Test2()
         {
@@ -45,10 +61,6 @@ namespace LeTesto
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
             stopwatch.Stop();
-            Xmlirise xml = new Xmlirise();
-            xml.Serialize(mainList);
-            Jsonise json = new Jsonise();
-            json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
         [Fact]
@@ -67,10 +79,6 @@ namespace LeTesto
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
             stopwatch.Stop();
-            Xmlirise xml = new Xmlirise();
-            xml.Serialize(mainList);
-            Jsonise json = new Jsonise();
-            json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - mainList.list[0].duration) < 100);
         }
         
@@ -96,10 +104,6 @@ namespace LeTesto
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
             stopwatch.Stop();
-            Xmlirise xml = new Xmlirise();
-            xml.Serialize(mainList);
-            Jsonise json = new Jsonise();
-            json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
         [Fact]
@@ -125,10 +129,6 @@ namespace LeTesto
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
             stopwatch.Stop();
-            Xmlirise xml = new Xmlirise();
-            xml.Serialize(mainList);
-            Jsonise json = new Jsonise();
-            json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds - mainList.list[0].duration) < 100);
         }
     }

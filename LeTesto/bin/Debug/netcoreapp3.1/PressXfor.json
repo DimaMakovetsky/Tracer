@@ -6,22 +6,22 @@
           "trace": {
             "methodName": "Test1",
             "className": "Testo",
-            "Time": 501
+            "Time": 500
           },
           "miniMethodList": [
             {
               "trace": {
                 "methodName": "DoSomething2",
                 "className": "Program",
-                "Time": 501
+                "Time": 500
               },
               "miniMethodList": []
             }
           ]
         }
       ],
-      "ID": 14,
-      "Time": 501
+      "ID": 13,
+      "Time": 500
     }
   ]
 }

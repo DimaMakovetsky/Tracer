@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Text;
 
 
-namespace Tracer
+namespace TracerLibrary1
 {
     interface ITrace
     {
