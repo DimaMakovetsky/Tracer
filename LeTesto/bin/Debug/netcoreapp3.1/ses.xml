@@ -17,11 +17,14 @@
                 <fullDuration>500</fullDuration>
               </trace>
               <miniMethodList />
+              <miniThreadsList />
             </TracerClass>
           </miniMethodList>
+          <miniThreadsList />
         </TracerClass>
       </methodList>
-      <ID>13</ID>
+      <threadList />
+      <ID>14</ID>
       <Time>500</Time>
     </ThreadsClass>
   </threads>

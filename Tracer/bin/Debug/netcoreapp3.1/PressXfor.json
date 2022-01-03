@@ -6,7 +6,7 @@
           "trace": {
             "methodName": "Main",
             "className": "Program",
-            "Time": 4591
+            "Time": 4605
           },
           "miniMethodList": [
             {
@@ -22,14 +22,14 @@
               "trace": {
                 "methodName": "DoSomething",
                 "className": "Program",
-                "Time": 1781
+                "Time": 1780
               },
               "miniMethodList": [
                 {
                   "trace": {
                     "methodName": "DoSomething2",
                     "className": "Program",
-                    "Time": 501
+                    "Time": 500
                   },
                   "miniMethodList": [],
                   "miniThreadsList": []
@@ -43,43 +43,70 @@
               "methodList": [
                 {
                   "trace": {
-                    "methodName": "DoSomething2",
+                    "methodName": "DoSomethingWithThread2",
                     "className": "Program",
-                    "Time": 501
+                    "Time": 2302
                   },
                   "miniMethodList": [],
-                  "miniThreadsList": []
-                },
-                {
-                  "trace": {
-                    "methodName": "DoSomething",
-                    "className": "Program",
-                    "Time": 1781
-                  },
-                  "miniMethodList": [
+                  "miniThreadsList": [
                     {
-                      "trace": {
-                        "methodName": "DoSomething2",
-                        "className": "Program",
-                        "Time": 500
-                      },
-                      "miniMethodList": [],
-                      "miniThreadsList": []
+                      "methodList": [
+                        {
+                          "trace": {
+                            "methodName": "DoSomethingWithThread",
+                            "className": "Program",
+                            "Time": 2281
+                          },
+                          "miniMethodList": [
+                            {
+                              "trace": {
+                                "methodName": "DoSomething2",
+                                "className": "Program",
+                                "Time": 500
+                              },
+                              "miniMethodList": [],
+                              "miniThreadsList": []
+                            },
+                            {
+                              "trace": {
+                                "methodName": "DoSomething",
+                                "className": "Program",
+                                "Time": 1781
+                              },
+                              "miniMethodList": [
+                                {
+                                  "trace": {
+                                    "methodName": "DoSomething2",
+                                    "className": "Program",
+                                    "Time": 500
+                                  },
+                                  "miniMethodList": [],
+                                  "miniThreadsList": []
+                                }
+                              ],
+                              "miniThreadsList": []
+                            }
+                          ],
+                          "miniThreadsList": []
+                        }
+                      ],
+                      "threadList": [],
+                      "ID": 6,
+                      "Time": 2282
                     }
-                  ],
-                  "miniThreadsList": []
+                  ]
                 }
               ],
               "threadList": [],
               "ID": 5,
-              "Time": 2282
+              "Time": 2302
             }
           ]
         }
       ],
       "threadList": [],
       "ID": 1,
-      "Time": 4593
+      "Time": 4607
     }
   ]
 }

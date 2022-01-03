@@ -7,7 +7,7 @@
           <trace>
             <methodName>Main</methodName>
             <className>Program</className>
-            <fullDuration>4591</fullDuration>
+            <fullDuration>4605</fullDuration>
           </trace>
           <miniMethodList>
             <TracerClass>
@@ -23,14 +23,14 @@
               <trace>
                 <methodName>DoSomething</methodName>
                 <className>Program</className>
-                <fullDuration>1781</fullDuration>
+                <fullDuration>1780</fullDuration>
               </trace>
               <miniMethodList>
                 <TracerClass>
                   <trace>
                     <methodName>DoSomething2</methodName>
                     <className>Program</className>
-                    <fullDuration>501</fullDuration>
+                    <fullDuration>500</fullDuration>
                   </trace>
                   <miniMethodList />
                   <miniThreadsList />
@@ -44,43 +44,70 @@
               <methodList>
                 <TracerClass>
                   <trace>
-                    <methodName>DoSomething2</methodName>
+                    <methodName>DoSomethingWithThread2</methodName>
                     <className>Program</className>
-                    <fullDuration>501</fullDuration>
+                    <fullDuration>2302</fullDuration>
                   </trace>
                   <miniMethodList />
-                  <miniThreadsList />
-                </TracerClass>
-                <TracerClass>
-                  <trace>
-                    <methodName>DoSomething</methodName>
-                    <className>Program</className>
-                    <fullDuration>1781</fullDuration>
-                  </trace>
-                  <miniMethodList>
-                    <TracerClass>
-                      <trace>
-                        <methodName>DoSomething2</methodName>
-                        <className>Program</className>
-                        <fullDuration>500</fullDuration>
-                      </trace>
-                      <miniMethodList />
-                      <miniThreadsList />
-                    </TracerClass>
-                  </miniMethodList>
-                  <miniThreadsList />
+                  <miniThreadsList>
+                    <ThreadsClass>
+                      <methodList>
+                        <TracerClass>
+                          <trace>
+                            <methodName>DoSomethingWithThread</methodName>
+                            <className>Program</className>
+                            <fullDuration>2281</fullDuration>
+                          </trace>
+                          <miniMethodList>
+                            <TracerClass>
+                              <trace>
+                                <methodName>DoSomething2</methodName>
+                                <className>Program</className>
+                                <fullDuration>500</fullDuration>
+                              </trace>
+                              <miniMethodList />
+                              <miniThreadsList />
+                            </TracerClass>
+                            <TracerClass>
+                              <trace>
+                                <methodName>DoSomething</methodName>
+                                <className>Program</className>
+                                <fullDuration>1781</fullDuration>
+                              </trace>
+                              <miniMethodList>
+                                <TracerClass>
+                                  <trace>
+                                    <methodName>DoSomething2</methodName>
+                                    <className>Program</className>
+                                    <fullDuration>500</fullDuration>
+                                  </trace>
+                                  <miniMethodList />
+                                  <miniThreadsList />
+                                </TracerClass>
+                              </miniMethodList>
+                              <miniThreadsList />
+                            </TracerClass>
+                          </miniMethodList>
+                          <miniThreadsList />
+                        </TracerClass>
+                      </methodList>
+                      <threadList />
+                      <ID>6</ID>
+                      <Time>2282</Time>
+                    </ThreadsClass>
+                  </miniThreadsList>
                 </TracerClass>
               </methodList>
               <threadList />
               <ID>5</ID>
-              <Time>2282</Time>
+              <Time>2302</Time>
             </ThreadsClass>
           </miniThreadsList>
         </TracerClass>
       </methodList>
       <threadList />
       <ID>1</ID>
-      <Time>4593</Time>
+      <Time>4607</Time>
     </ThreadsClass>
   </threads>
 </MainList>

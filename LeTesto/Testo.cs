@@ -5,6 +5,7 @@ using System.Threading;
 using System.IO;
 using System.Reflection;
 using System.Diagnostics;
+using TracerLibrary1;
 
 namespace LeTesto
 {
@@ -24,10 +25,6 @@ namespace LeTesto
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
             stopwatch.Stop();
-            Xmlirise xml = new Xmlirise();
-            xml.Serialize(mainList);
-            Jsonise json = new Jsonise();
-            json.Serialize(mainList);
             Assert.True(Math.Abs(stopwatch.ElapsedMilliseconds -mainList.list[0].duration) < 100);
         }
         [Fact]
