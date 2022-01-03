@@ -6,23 +6,23 @@
           "trace": {
             "methodName": "Main",
             "className": "Program",
-            "Time": 3308
+            "Time": 4591
           },
           "miniMethodList": [
             {
               "trace": {
                 "methodName": "DoSomething2",
                 "className": "Program",
-                "Time": 501
+                "Time": 500
               },
               "miniMethodList": [],
-              "threadsList": null
+              "miniThreadsList": []
             },
             {
               "trace": {
                 "methodName": "DoSomething",
                 "className": "Program",
-                "Time": 1782
+                "Time": 1781
               },
               "miniMethodList": [
                 {
@@ -32,32 +32,54 @@
                     "Time": 501
                   },
                   "miniMethodList": [],
-                  "threadsList": null
+                  "miniThreadsList": []
                 }
               ],
-              "threadsList": null
+              "miniThreadsList": []
             }
           ],
-          "threadsList": null
+          "miniThreadsList": [
+            {
+              "methodList": [
+                {
+                  "trace": {
+                    "methodName": "DoSomething2",
+                    "className": "Program",
+                    "Time": 501
+                  },
+                  "miniMethodList": [],
+                  "miniThreadsList": []
+                },
+                {
+                  "trace": {
+                    "methodName": "DoSomething",
+                    "className": "Program",
+                    "Time": 1781
+                  },
+                  "miniMethodList": [
+                    {
+                      "trace": {
+                        "methodName": "DoSomething2",
+                        "className": "Program",
+                        "Time": 500
+                      },
+                      "miniMethodList": [],
+                      "miniThreadsList": []
+                    }
+                  ],
+                  "miniThreadsList": []
+                }
+              ],
+              "threadList": [],
+              "ID": 5,
+              "Time": 2282
+            }
+          ]
         }
       ],
+      "threadList": [],
       "ID": 1,
-      "Time": 3313
-    },
-    {
-      "methodList": [
-        {
-          "trace": {
-            "methodName": "DoSomethingButNotInMain",
-            "className": "NotMainClass",
-            "Time": 1000
-          },
-          "miniMethodList": [],
-          "threadsList": null
-        }
-      ],
-      "ID": 6,
-      "Time": 1001
+      "Time": 4593
     }
   ]
 }

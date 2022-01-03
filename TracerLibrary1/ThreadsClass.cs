@@ -21,11 +21,13 @@ namespace TracerLibrary1
         [JsonProperty("Time")]
         public long duration { get; set; }
         public List<TracerClass> methodList;
+        public List<ThreadsClass> threadList;
         public ThreadsClass(int id)
         {
             this.id = id;
             stopwatch = new Stopwatch();
             methodList = new List<TracerClass>();
+            threadList = new List<ThreadsClass>();
             stopwatch.Start();
         }
         public ThreadsClass()

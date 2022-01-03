@@ -19,7 +19,7 @@ namespace TracerLibrary1
         [XmlArray]
         [JsonProperty]
         public List<TracerClass> miniMethodList;
-        public List<ThreadsClass> threadsList;
+        public List<ThreadsClass> miniThreadsList;
         
         public TracerClass(string methodName, string className)
         {
@@ -27,6 +27,7 @@ namespace TracerLibrary1
             trace.methodName = methodName;
             duration = new Stopwatch();
             miniMethodList = new List<TracerClass>();
+            miniThreadsList = new List<ThreadsClass>();
         }
         public TracerClass()
         {

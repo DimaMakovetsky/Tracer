@@ -19,19 +19,25 @@ namespace Tracer
             TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
             tracer.startTrace();
             
-            tracer.miniMethodList.Add(Tracer.Program.DoSomething2());
-            tracer.miniMethodList.Add(Tracer.Program.DoSomething());
-            ThreadsClass threads = null;
-
+            tracer.miniMethodList.Add(DoSomething2());
+            tracer.miniMethodList.Add(DoSomething());
+            /*ThreadsClass threads = null;
             Thread thread = new Thread(() =>
               {
                   threads = NotMainClass.DoSomethingButNotInMain();
               });
+            thread.Start();*/
+            ThreadsClass threads = null;
+            Thread thread = new Thread(() =>
+            {
+                threads = DoSomethingWithThread();
+            });
             thread.Start();
             Thread.Sleep(120);
 
             thread.Join();
-            mainList.list.Add(threads);
+            tracer.miniThreadsList.Add(threads);
+            //mainList.list.Add(threads);
             tracer.endTrace();
             threadList.methodList.Add(tracer);
             threadList.EndContdown();
@@ -59,6 +65,37 @@ namespace Tracer
             Thread.Sleep(500);
             tracer.endTrace();
             return tracer;
+        }
+        static public ThreadsClass DoSomethingWithThread()
+        {
+            ThreadsClass threadList = new ThreadsClass(Thread.CurrentThread.ManagedThreadId);
+            
+            TracerClass tracer = new TracerClass(MethodBase.GetCurrentMethod().Name, MethodBase.GetCurrentMethod().DeclaringType.Name);
+            tracer.startTrace();
+
+            tracer.miniMethodList.Add(DoSomething2());
+            tracer.miniMethodList.Add(DoSomething());
+            /*ThreadsClass threads = null;
+
+            Thread thread = new Thread(() =>
+            {
+                threads = NotMainClass.DoSomethingButNotInMain();
+            });
+            thread.Start();
+            Thread.Sleep(120);
+
+            thread.Join();
+            mainList.list.Add(threads);*/
+            //threadList.methodList.Add(tracer);
+            tracer.endTrace();
+            
+            threadList.EndContdown();
+            for (int i = 0; i < tracer.miniMethodList.Count; i++)
+            {
+                threadList.methodList.Add(tracer.miniMethodList[i]);
+            }
+            //tracer.miniThreadsList.Add(threadList);
+            return threadList;
         }
     }
 }
